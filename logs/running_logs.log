@@ -1,1 +1,31 @@
 [2025-11-28 07:57:33,545: INFO: main: Starting the CNN Classifier application...]
+[2025-12-02 13:25:22,841: INFO: main: >>>>>>>>>> Stage Data Ingestion Stage started <<<<<<<<<<]
+[2025-12-02 13:25:22,842: INFO: common: yaml file: configs\config.yaml loaded successfully]
+[2025-12-02 13:25:22,842: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-02 13:25:22,842: INFO: common: Directory created at: artifacts]
+[2025-12-02 13:25:22,842: INFO: common: Directory created at: artifacts/data_ingestion]
+[2025-12-02 13:25:22,842: INFO: data_ingestion: Downloading file from :[https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing] into :[artifacts/data_ingestion/data.zip]]
+[2025-12-02 13:25:56,674: INFO: data_ingestion: File :[artifacts/data_ingestion/data.zip] has been downloaded successfully.]
+[2025-12-02 13:25:56,675: ERROR: main: name 'Path' is not defined]
+Traceback (most recent call last):
+  File "D:\Projects\kidney-disease-classification\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "D:\Projects\kidney-disease-classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_data()
+  File "D:\Projects\kidney-disease-classification\src\cnnClassifier\components\data_ingestion.py", line 30, in download_data
+    raise e
+  File "D:\Projects\kidney-disease-classification\src\cnnClassifier\components\data_ingestion.py", line 27, in download_data
+    logger.info(f"File size :[{get_size(Path(zip_downloaded_dir))}]")
+NameError: name 'Path' is not defined
+[2025-12-02 13:26:40,684: INFO: main: >>>>>>>>>> Stage Data Ingestion Stage started <<<<<<<<<<]
+[2025-12-02 13:26:40,684: INFO: common: yaml file: configs\config.yaml loaded successfully]
+[2025-12-02 13:26:40,684: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-02 13:26:40,684: INFO: common: Directory created at: artifacts]
+[2025-12-02 13:26:40,684: INFO: common: Directory created at: artifacts/data_ingestion]
+[2025-12-02 13:26:40,684: INFO: data_ingestion: Downloading file from :[https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing] into :[artifacts/data_ingestion/data.zip]]
+[2025-12-02 13:27:01,624: INFO: data_ingestion: File :[artifacts/data_ingestion/data.zip] has been downloaded successfully.]
+[2025-12-02 13:27:01,624: INFO: data_ingestion: File size :[56361.28 KB]]
+[2025-12-02 13:27:02,215: INFO: data_ingestion: Extraction completed successfully.]
+[2025-12-02 13:27:02,221: INFO: main: >>>>>>>>>> Stage Data Ingestion Stage completed <<<<<<<<<<
+
+x==========x]
