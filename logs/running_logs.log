@@ -29,3 +29,24 @@ NameError: name 'Path' is not defined
 [2025-12-02 13:27:02,221: INFO: main: >>>>>>>>>> Stage Data Ingestion Stage completed <<<<<<<<<<
 
 x==========x]
+[2025-12-03 11:54:06,874: INFO: main: >>>>>>>>>> Stage Data Ingestion Stage started <<<<<<<<<<]
+[2025-12-03 11:54:06,876: INFO: common: yaml file: configs\config.yaml loaded successfully]
+[2025-12-03 11:54:06,879: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-03 11:54:06,881: INFO: common: Directory created at: artifacts]
+[2025-12-03 11:54:06,881: INFO: common: Directory created at: artifacts/data_ingestion]
+[2025-12-03 11:54:06,881: INFO: data_ingestion: Downloading file from :[https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing] into :[artifacts/data_ingestion/data.zip]]
+[2025-12-03 11:54:28,417: INFO: data_ingestion: File :[artifacts/data_ingestion/data.zip] has been downloaded successfully.]
+[2025-12-03 11:54:28,417: INFO: data_ingestion: File size :[56361.28 KB]]
+[2025-12-03 11:54:28,914: INFO: data_ingestion: Extraction completed successfully.]
+[2025-12-03 11:54:28,914: INFO: main: >>>>>>>>>> Stage Data Ingestion Stage completed <<<<<<<<<<
+
+x==========x]
+[2025-12-03 11:54:28,914: INFO: main: >>>>>>>>>> Stage Prepare Base Model Stage started <<<<<<<<<<]
+[2025-12-03 11:54:28,914: INFO: common: yaml file: configs\config.yaml loaded successfully]
+[2025-12-03 11:54:28,914: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-03 11:54:28,914: INFO: common: Directory created at: artifacts]
+[2025-12-03 11:54:28,914: INFO: common: Directory created at: artifacts/prepare_base_model]
+[2025-12-03 11:54:29,417: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-12-03 11:54:29,665: INFO: main: >>>>>>>>>> Stage Prepare Base Model Stage completed <<<<<<<<<<
+
+x==========x]
