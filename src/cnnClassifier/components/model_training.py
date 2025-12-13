@@ -16,7 +16,7 @@ class Training:
         )
     
     def train_valid_generator(self):
-        datagen_kwargs = dict(rescale=1./255, validation_split=0.20)
+        datagen_kwargs = dict(preprocessing_function=tf.keras.applications.vgg16.preprocess_input, validation_split=0.20)
 
         dataflow_kwargs = dict(
             target_size=self.config.params_image_size[:-1],
@@ -52,6 +52,7 @@ class Training:
             shuffle=True,
             **dataflow_kwargs
         )
+        print("Class indices:", self.train_generator.class_indices)
 
 
     @staticmethod

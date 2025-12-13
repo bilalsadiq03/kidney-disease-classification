@@ -114,43 +114,6 @@ def save_binary_file(file_path: Path, data: Any) -> None:
         logger.error(f"Error saving data to binary file: {e}")
         raise e
     
-
-@ensure_annotations
-def encode_image_to_base64(image_path: Path) -> str:
-    """Encodes an image to a base64 string
-
-    Args:
-        image_path (Path): Path to the image file
-
-    Returns:
-        str: Base64 encoded string of the image
-    """
-    try:
-        with open(image_path, "rb") as image_file:
-            encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
-        logger.info(f"Image at {image_path} successfully encoded to base64")
-        return encoded_string
-    except Exception as e:
-        logger.error(f"Error encoding image to base64: {e}")
-        raise e
-
-@ensure_annotations
-def decode_base64_to_image(base64_string: str, output_path: Path) -> None:
-    """Decodes a base64 string and saves it as an image file
-
-    Args:
-        base64_string (str): Base64 encoded string of the image
-        output_path (Path): Path to save the decoded image file
-    """
-    try:
-        image_data = base64.b64decode(base64_string)
-        with open(output_path, "wb") as image_file:
-            image_file.write(image_data)
-        logger.info(f"Base64 string successfully decoded and saved to {output_path}")
-    except Exception as e:
-        logger.error(f"Error decoding base64 string to image: {e}")
-        raise e
-
 @ensure_annotations
 def get_size(path: Path) -> str:
     """Gets the size of a file or directory in KB
@@ -164,22 +127,19 @@ def get_size(path: Path) -> str:
     size_in_bytes = os.path.getsize(path)
     size_in_kb = size_in_bytes / 1024
     return f"{size_in_kb:.2f} KB"
-
-@ensure_annotations
-def list_files_in_directory(directory_path: Path) -> list:
-    """Lists all files in a directory
-
-    Args:
-        directory_path (Path): Path to the directory
-
-    Returns:
-        list: List of file paths
-    """
-    try:
-        files = [f for f in directory_path.iterdir() if f.is_file()]
-        logger.info(f"Listed {len(files)} files in directory {directory_path}")
-        return files
-    except Exception as e:
-        logger.error(f"Error listing files in directory: {e}")
-        raise e
     
+
+
+def decodeImage(imgstring, fileName):
+    imgdata = base64.b64decode(imgstring)
+    with open(fileName, 'wb') as f:
+        f.write(imgdata)
+        f.close()
+
+
+def encodeImageIntoBase64(croppedImagePath):
+    with open(croppedImagePath, "rb") as f:
+        return base64.b64encode(f.read())
+
+
+

@@ -119,7 +119,7 @@ export MLFLOW_TRACKING_PASSWORD=YOUR_MLFLOW_PASSWORD
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: YOUR_URI
+    - Save the URI: YOUR_URI 
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
